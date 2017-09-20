@@ -2,8 +2,11 @@
 
 let Location;
 let Character;
+let Enemy;
 
 
+
+function battleStart(location,Character,Enemy)
 // function rollForClass() {
 // 	let d8 = (Math.floor(Math.random() * 8) + 1);
 // 	if(d8 === 1){
@@ -176,9 +179,87 @@ let Character;
 // 		}
 // }
 function encounterEnemiesLow(location) {
-	let d3 = Math.floor(Math.random() * 12) + 1;
-	if (location===TheRuins)
-		Enemy = 
+	let d5 = Math.floor(Math.random() * 12) + 1;
+		if(location === TheRuins) {
+			if(d5 === 1) {
+				Enemy = Bone Defender
+				return = Enemy
+			}
+			else if(d5 === 2) {
+				Enemy = Bone Courtier
+				return = Enemy
+			}
+			else if(d5 === 3) {
+				Enemy = Bone Arbalest
+				return = Enemy
+			}
+			else if(d5 === 4) {
+				Enemy = Cultist Brawler
+				return = Enemy
+			}
+			else if(d5 === 5) {
+				Enemy = Cultist Acolyte
+				return = Enemy
+		if(location === TheWarrens) {
+			if(d5 === 1) {
+				Enemy = Swine Chopper
+				return = Enemy
+			}
+			else if(d5 === 2) {
+				Enemy = Swine Slasher
+				return = Enemy
+			}
+			else if(d5 === 3) {
+				Enemy = Swine Wretch
+				return = Enemy
+			}
+			else if(d5 === 4) {
+				Enemy = Swinetaur
+				return = Enemy
+			}
+			else if(d5 === 5) {
+				Enemy = Carrion Eater
+				return = Enemy
+		if(location === TheWeld) {
+			if(d5 === 1) {
+				Enemy = Rabid Gnasher
+				return = Enemy
+			}
+			else if(d5 === 2) {
+				Enemy = Fungal Scratcher
+				return = Enemy
+			}
+			else if(d5 === 3) {
+				Enemy = Fungal Artillery
+				return = Enemy
+			}
+			else if(d5 === 4) {
+				Enemy = Crone
+				return = Enemy
+			}
+			else if(d5 === 5) {
+				Enemy = Madman
+				return = Enemy
+		if(location === TheCove) {
+			if(d5 === 1) {
+				Enemy = Pelagic Grouper
+				return = Enemy
+			}
+			else if(d5 === 2) {
+				Enemy = Pelagic Shaman
+				return = Enemy
+			}
+			else if(d5 === 3) {
+				Enemy = Pelagic Guardian
+				return = Enemy
+			}
+			else if(d5 === 4) {
+				Enemy = Sea Maggot
+				return = Enemy
+			}
+			else if(d5 === 5) {
+				Enemy = Deep Stinger
+				return = Enemy
 }
 
 
