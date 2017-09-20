@@ -29,10 +29,7 @@
 // 	else if(d8 === 8){
 // 		return "Occultist"
 // 	}
-
 // }
-
-// console.log(rollD8())
 
 // function rollForDamage() {
 // 	let d20 = Math.floor(Math.random() * 20) + 1;
@@ -76,10 +73,37 @@
 // 		return "Crit!"
 // 	}
 // }
-//  console.log(rollForDamage())
-// function rollD12() {
-// 	let d12 = Math.floor(Math.random() * 12) + 1;
-// }
+//  console.log()
+
+function deathsDoorTrigger() {
+	let d3 = Math.floor(Math.random() * 3) + 1;
+	if(d3 === 1 || 2)
+		return "Survived!"
+	else if (d3 === 3)
+		return "DEATHBLOW"
+ }
+
+function checkFoundHallwayObject() {
+	let 
+}
+
+function rollForHallwayEncounter() {
+	let d12 = Math.floor(Math.random() * 12) + 1;
+	if(d12>=2) {
+		return "no encounter"
+	}
+	else if(d12 === 3 || 4) {
+		return (checkFoundHallwayObject())
+	}
+	else if(d12 === 5 || 6 || 7) {
+		return (encounterFight)
+	}
+	else if(d12 === 8 || 9 || 10) {
+
+	}
+	else if(d12 === 12) {
+
+	}
 
 // function rollForEncounterType() {
 // 	let d10 = Math.floor(Math.random() * 10) + 1;
@@ -132,30 +156,33 @@
 // 	}
 // }	
 
-function heartAttackTrigger() {
-	let thumpThump = Math.floor(Math.random() * 3) + 1;
-		if(thumpThump === 1 || 2) {
-			return (stress = 170)
-}
-		else if(thumpThump === 3){
-			return (healthPoints = 0)
-		}
+// let stress = prompt("#")
+// let healthPoints = prompt("#")
 
+// function heartAttackTrigger() {
+// 	let d3 = Math.floor(Math.random() * 3) + 1;
+// 		if(d3 === 1 || 2) {
+// 			return (stress = 170)
+// }
+// 		else if(d3 === 3) {
+// 			return (hitPoints = 0)
+// }
+// 		else if (thumpThump === 3 && hitPoints === 0) {
+// 			return "DEATHBLOW"
+// }
+// }
 
+// }
+// function stressCheckTrigger(Stress){
 
-}
-function stressCheckTrigger(Stress){
-
-	while(StressStatus !== undefined && Stress >=100){
-	//define in a units code, not in here, or global.
-		checkForAffliction()
-}
-	else if(stress >= 200) {
-		return heartAttackTrigger()
-	}
-}
-
-
+// 	while(StressStatus !== undefined && Stress >=100){
+// 	//define in a units code, not in here, or global.
+// 		checkForAffliction()
+// }
+// 	else if(stress >= 200) {
+// 		return heartAttackTrigger()
+// 	}
+// }
 
 // function rollD6() {
 // 	let d6 = Math.floor(Math.random() * 6) + 1;
