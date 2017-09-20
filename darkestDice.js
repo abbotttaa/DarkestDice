@@ -1,33 +1,42 @@
 "use strict"
 
-
+let Location;
+let Character;
 
 
 // function rollForClass() {
 // 	let d8 = (Math.floor(Math.random() * 8) + 1);
 // 	if(d8 === 1){
-// 		return "Bounty Hunter"
+// 		Character = Bounty Hunter
+// 		return Character
 // 	}
 // 	else if(d8 === 2) {
-// 		return "Crusader"
+// 		Character= Crusader
+// 		return Character
 // 	}
 // 	else if(d8 === 3){
-// 		return "Grave Robber"
+// 		Character = Grave Robber
+// 		return Character
 // 	}
 // 	else if(d8 === 4){
-// 		return "Hellion"
+// 		Character = Hellion
+// 		return Character
 // 	}
 // 	else if(d8 === 5){
-// 		return "Highwayman"
+// 		Character = Highwayman
+// 		return Character
 // 	}
 // 	else if(d8 === 6){
-// 		return "Jester"
+// 		Character = Jester
+// 		return Character
 // 	}
 // 	else if(d8 === 7){
-// 		return "Leper"
+// 		Character = Leper
+// 		return Character
 // 	}
 // 	else if(d8 === 8){
-// 		return "Occultist"
+// 		Character = Occultist
+// 		return Character
 // 	}
 // }
 
@@ -75,17 +84,103 @@
 // }
 //  console.log()
 
-function deathsDoorTrigger() {
-	let d3 = Math.floor(Math.random() * 3) + 1;
-	if(d3 === 1 || 2)
-		return "Survived!"
-	else if (d3 === 3)
-		return "DEATHBLOW"
- }
+// function deathsDoorTrigger() {
+// 	let d3 = Math.floor(Math.random() * 3) + 1;
+// 	if(d3 === 1 || 2)
+// 		return "Survived!"
+// 	else if (d3 === 3)
+// 		return "DEATHBLOW"
+//  }
 
-function checkFoundHallwayObject() {
-	let 
+// function checkFoundHallwayObject(Location) {
+// 	let d6 = Math.floor(Math.random() * 6) + 1;
+// 		if(location === TheRuins) {
+// 			if(d6 === 1) {
+// 				return "Alchemy Table"
+// 			}
+// 			else if(d6 === 2) {
+// 				return "Altar of Light"
+// 			}
+// 			else if(d6 === 3) {
+// 				return "Bookshelf"
+// 			}
+// 			else if(d6 === 4) {
+// 				return "Confession Booth"
+// 			}
+// 			else if(d6 === 5) {
+// 				return "Decorative Urn"
+// 			}
+// 			else if(d6 === 6) {
+// 				return "Suit of Armor"
+// 			}
+// 		}
+// 		if(location === TheWarrens) {
+// 			if(d6 === 1) {
+// 				return "Bone Altar"
+// 			}
+// 			else if(d6 === 2) {
+// 				return "Dinner Cart"
+// 			}
+// 			else if(d6 === 3) {
+// 				return "Moonshine Barrel"
+// 			}
+// 			else if(d6 === 4) {
+// 				return "Occult Scrawlings"
+// 			}
+// 			else if(d6 === 5) {
+// 				return "Sacrificial Stone"
+// 			}
+// 			else if(d6 === 6) {
+// 				return "Pile of Bones"
+// 			}
+// 		}
+// 		if(location ===TheWeld) {
+// 			if(d6 === 1) {
+// 				return "Ancient Coffin"
+// 			}
+// 			else if(d6 === 2) {
+// 				return "Beast Carcass"
+// 			}
+// 			else if(d6 === 3) {
+// 				return "Eerie Spiderweb"
+// 			}
+// 			else if(d6 === 4) {
+// 				return "Mummified Remains"
+// 			}
+// 			else if(d6 === 5) {
+// 				return "Old Tree"
+// 			}
+// 			else if(d6 === 6) {
+// 				return "Shallow Grave"
+// 			}
+// 		}
+// 		if(location === TheCove) {
+// 			if(d6 === 1) {
+// 				return "Barnacle Crusted Chest"
+// 			}
+// 			else if(d6 === 2) {
+// 				return "Eerie Coral"
+// 			}
+// 			else if(d6 === 3) {
+// 				return "Fish Idol"
+// 			}
+// 			else if(d6 === 4) {
+// 				return "Fish Carcass"
+// 			}
+// 			else if(d6 === 5) {
+// 				return "Giant Oyster"
+// 			}
+// 			else if(d6 === 6) {
+// 				return "Ship's Figurehead"
+// 			}
+// 		}
+// }
+function encounterEnemiesLow(location) {
+	let d3 = Math.floor(Math.random() * 12) + 1;
+	if (location===TheRuins)
+		Enemy = 
 }
+
 
 function rollForHallwayEncounter() {
 	let d12 = Math.floor(Math.random() * 12) + 1;
@@ -93,18 +188,18 @@ function rollForHallwayEncounter() {
 		return "no encounter"
 	}
 	else if(d12 === 3 || 4) {
-		return (checkFoundHallwayObject())
+		return (foundHallwayObject())
 	}
 	else if(d12 === 5 || 6 || 7) {
-		return (encounterFight)
+		return (encounterEnemiesLow)
 	}
 	else if(d12 === 8 || 9 || 10) {
-
+		return (encounterEnemiesMed())
 	}
 	else if(d12 === 12) {
-
+		return (encounterEnemiesHigh())
 	}
-
+}
 // function rollForEncounterType() {
 // 	let d10 = Math.floor(Math.random() * 10) + 1;
 // 	if(d10===1) {
@@ -188,19 +283,24 @@ function rollForHallwayEncounter() {
 // 	let d6 = Math.floor(Math.random() * 6) + 1;
 // }
 
-// function rollForMap() {
+// function rollForMap(Location) {
 // 	let d4 = Math.floor(Math.random() * 4) + 1;
 // 	if(d4 === 1){
-// 		return "The Ruins"
+// 		 Location = TheRuins
+// 		return Location;
 // 	}
 // 	else if(d4 === 2) {
-// 		return "The Warrens"
+// 		 Location = TheWarrens
+// 		return Location;
 // 	}
 // 	else if(d4 === 3){
-// 		return "The Weald"
+// 		 Location = TheWeld
+// 		return Location;
 // 	}
 // 	else if(d4 === 4){
-// 		return "The Cove"
+// 		 Location = TheCove
+// 		return Location;
+		
 // }
 
 
