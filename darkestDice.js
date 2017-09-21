@@ -3,42 +3,101 @@
 let Location;
 let Character;
 let Enemy;
+let bountyHunter = {
+	hitPoints: 25,
+	attackOne: 7
+	attackTwo: 3, //stun
+}
+let crusader = {
+	hitPoints: 33,
+	attackOne: 8
+	attackTwo: 0, //protect self
+}
+let graverobber = {
+	hitPoints: 20,
+	attackOne: 4
+	attackTwo: 5, //blight
+}
+let hellion = {
+	hitPoints: 26,
+	attackOne: 7
+	attackTwo: 4, //bleed
+}
+let highwayman = {
+	hitPoints: 23,
+	attackOne: 7
+	attackTwo: 2  //bleed,
+}
+let jester = {
+	hitPoints: 19,
+	attackOne: 5
+	attackTwo: 15, //stress heal
+}
+let leper = {
+	hitPoints: 35,
+	attackOne: 10
+	attackTwo: 0, // self heal
+}
+let occultist = {
+	hitPoints: 19,
+	attackOne: 5
+	attackTwo: 0, //roll to heal
+}
 
 
+alert("Ruin has come to this family")
 
-function battleStart(location,Character,Enemy)
+alert("Roll four times to assemble a team.")
+
+function fillClassSlotOne() {
+	rollForClass()
+}
+function fillClassSlotTwo() {
+	rollForClass()
+}
+function fillClassSlotThree() {
+	rollForClass()
+}
+function fillClassSlotFour() {
+	rollForClass()
+}
+
+function battleStart(location,Character,Enemy) {
+	
+}
+
 // function rollForClass() {
 // 	let d8 = (Math.floor(Math.random() * 8) + 1);
 // 	if(d8 === 1){
-// 		Character = Bounty Hunter
+// 		Character = bountyHunter
 // 		return Character
 // 	}
 // 	else if(d8 === 2) {
-// 		Character= Crusader
+// 		Character= crusader
 // 		return Character
 // 	}
 // 	else if(d8 === 3){
-// 		Character = Grave Robber
+// 		Character = graverobber
 // 		return Character
 // 	}
 // 	else if(d8 === 4){
-// 		Character = Hellion
+// 		Character = hellion
 // 		return Character
 // 	}
 // 	else if(d8 === 5){
-// 		Character = Highwayman
+// 		Character = highwayman
 // 		return Character
 // 	}
 // 	else if(d8 === 6){
-// 		Character = Jester
+// 		Character = jester
 // 		return Character
 // 	}
 // 	else if(d8 === 7){
-// 		Character = Leper
+// 		Character = leper
 // 		return Character
 // 	}
 // 	else if(d8 === 8){
-// 		Character = Occultist
+// 		Character = occultist
 // 		return Character
 // 	}
 // }
@@ -85,7 +144,6 @@ function battleStart(location,Character,Enemy)
 // 		return "Crit!"
 // 	}
 // }
-//  console.log()
 
 // function deathsDoorTrigger() {
 // 	let d3 = Math.floor(Math.random() * 3) + 1;
@@ -178,6 +236,9 @@ function battleStart(location,Character,Enemy)
 // 			}
 // 		}
 // }
+
+
+
 function encounterEnemiesLow(location) {
 	let d5 = Math.floor(Math.random() * 12) + 1;
 		if(location === TheRuins) {
@@ -272,7 +333,7 @@ function rollForHallwayEncounter() {
 		return (foundHallwayObject())
 	}
 	else if(d12 === 5 || 6 || 7) {
-		return (encounterEnemiesLow)
+		return (encounterEnemiesLow())
 	}
 	else if(d12 === 8 || 9 || 10) {
 		return (encounterEnemiesMed())
@@ -332,6 +393,28 @@ function rollForHallwayEncounter() {
 // 	}
 // }	
 
+// function checkForVirtue() {
+// 	let d5 = Math.floor(Math.random() * 5) + 1;
+// 	if(d5 === 1) {
+// 		StressStatus = Powerful
+// 		return StressStatus
+// 	}
+// 	else if(d5 === 2) {
+// 		StressStatus = Courageous
+// 		return StressStatus
+// 	}
+// 	else if(d5 === 3) {
+// 		StressStatus = Stalwart
+// 		return StressStatus
+// 	}
+// 	else if(d5 === 4) {
+// 		StressStatus = Vigorous
+// 		return StressStatus
+// 	}
+// 	else if(d5 === 5) {
+// 		StressStatus = Focused
+// 		return StressStatus
+// 	}
 // let stress = prompt("#")
 // let healthPoints = prompt("#")
 
@@ -348,12 +431,20 @@ function rollForHallwayEncounter() {
 // }
 // }
 
+// function rollForStressStatus() {
+// 	let d4 = Math.florr(Math.random() * 4) +1;
+// 	if(d4 <= 3)
+// 		checkForAffliction()
+// 	if(d4 = 4)
+// 		checkForVirtue()
+// }
+
 // }
 // function stressCheckTrigger(Stress){
 
 // 	while(StressStatus !== undefined && Stress >=100){
 // 	//define in a units code, not in here, or global.
-// 		checkForAffliction()
+// 		rollForStressStatus()
 // }
 // 	else if(stress >= 200) {
 // 		return heartAttackTrigger()
